@@ -12,6 +12,12 @@
 		A1B6A1B921DB7C7C008862A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B6A1B721DB7C7C008862A1 /* Main.storyboard */; };
 		A1B6A1BB21DB7C7E008862A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B6A1BA21DB7C7E008862A1 /* Assets.xcassets */; };
 		A1B6A1BE21DB7C7E008862A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B6A1BC21DB7C7E008862A1 /* LaunchScreen.storyboard */; };
+		A1B6A1C721DB8F5F008862A1 /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6A1C621DB8F5E008862A1 /* MonthYearPickerView.swift */; };
+		A1B6A1E921DBB3DA008862A1 /* RevenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6A1E821DBB3DA008862A1 /* RevenueViewController.swift */; };
+		A1B6A1EB21DBB960008862A1 /* DepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6A1EA21DBB960008862A1 /* DepenseViewController.swift */; };
+		A1B6A1ED21DBCAF2008862A1 /* DepenseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6A1EC21DBCAF2008862A1 /* DepenseCollectionViewCell.swift */; };
+		A1B6A1EF21DBDB3B008862A1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6A1EE21DBDB3B008862A1 /* CategoryViewController.swift */; };
+		A1B6A1F121DBDB5F008862A1 /* AddDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B6A1F021DBDB5F008862A1 /* AddDepenseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		A1B6A1BA21DB7C7E008862A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B6A1BD21DB7C7E008862A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1B6A1BF21DB7C7E008862A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B6A1C621DB8F5E008862A1 /* MonthYearPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthYearPickerView.swift; sourceTree = "<group>"; };
+		A1B6A1E821DBB3DA008862A1 /* RevenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueViewController.swift; sourceTree = "<group>"; };
+		A1B6A1EA21DBB960008862A1 /* DepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseViewController.swift; sourceTree = "<group>"; };
+		A1B6A1EC21DBCAF2008862A1 /* DepenseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1B6A1EE21DBDB3B008862A1 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		A1B6A1F021DBDB5F008862A1 /* AddDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +66,18 @@
 		A1B6A1B221DB7C7B008862A1 /* Gestionnaire d'argent */ = {
 			isa = PBXGroup;
 			children = (
+				A1B6A1C621DB8F5E008862A1 /* MonthYearPickerView.swift */,
 				A1B6A1B321DB7C7B008862A1 /* AppDelegate.swift */,
 				A1B6A1B521DB7C7B008862A1 /* ViewController.swift */,
 				A1B6A1B721DB7C7C008862A1 /* Main.storyboard */,
 				A1B6A1BA21DB7C7E008862A1 /* Assets.xcassets */,
 				A1B6A1BC21DB7C7E008862A1 /* LaunchScreen.storyboard */,
 				A1B6A1BF21DB7C7E008862A1 /* Info.plist */,
+				A1B6A1E821DBB3DA008862A1 /* RevenueViewController.swift */,
+				A1B6A1EA21DBB960008862A1 /* DepenseViewController.swift */,
+				A1B6A1EC21DBCAF2008862A1 /* DepenseCollectionViewCell.swift */,
+				A1B6A1EE21DBDB3B008862A1 /* CategoryViewController.swift */,
+				A1B6A1F021DBDB5F008862A1 /* AddDepenseViewController.swift */,
 			);
 			path = "Gestionnaire d'argent";
 			sourceTree = "<group>";
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B6A1C721DB8F5F008862A1 /* MonthYearPickerView.swift in Sources */,
 				A1B6A1B621DB7C7B008862A1 /* ViewController.swift in Sources */,
+				A1B6A1EF21DBDB3B008862A1 /* CategoryViewController.swift in Sources */,
+				A1B6A1ED21DBCAF2008862A1 /* DepenseCollectionViewCell.swift in Sources */,
+				A1B6A1EB21DBB960008862A1 /* DepenseViewController.swift in Sources */,
+				A1B6A1F121DBDB5F008862A1 /* AddDepenseViewController.swift in Sources */,
 				A1B6A1B421DB7C7B008862A1 /* AppDelegate.swift in Sources */,
+				A1B6A1E921DBB3DA008862A1 /* RevenueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
