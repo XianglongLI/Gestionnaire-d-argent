@@ -8,33 +8,46 @@
 
 import UIKit
 
-class DepenseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class DepenseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var month: UILabel!
     
     var monthStr: String? = nil
-    let items = ["24/12", "Transport", "bus", "1.35", "15/12", "Aliment", "pizza", "10", "09/12", "Habillement", "jeans", "30"]
+    var consommations: [Consommation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         month.text = "Dépenses du " + monthStr!
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepenseCell", for: indexPath) as! DepenseCollectionViewCell
-        cell.myLabel.text = items[indexPath.item]
-        return cell
+        let monthArr = monthStr?.components(separatedBy: "/")
+        let monthInt = Int(monthArr![0])
+        let yearInt = Int(monthArr![1])
+        consommations = DBConnection.getDepenses(dYear: yearInt!, dMonth: monthInt!)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let categoryViewController = segue.destination as? CategoryViewController {
             categoryViewController.month = monthStr
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return consommations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        NSLog(String(consommations.count))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DepenseCell", for: indexPath) as! DepenseTableViewCell
+        for (index, consommation) in consommations.enumerated() {
+            if index == indexPath.row {
+                cell.month.text = String(format: "%02d/%02d", consommation.day, consommation.month)
+                cell.category.text = consommation.category
+                cell.desc.text = consommation.description
+                cell.price.text = String(consommation.price)
+            }
+        }
+        return cell
     }
 
     /*

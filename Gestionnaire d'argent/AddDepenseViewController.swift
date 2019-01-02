@@ -11,6 +11,9 @@ import UIKit
 class AddDepenseViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var day: UITextField!
+    @IBOutlet weak var desc: UITextField!
+    @IBOutlet weak var price: UITextField!
     
     var category: String? = nil
     var month: String? = nil
@@ -23,7 +26,26 @@ class AddDepenseViewController: UIViewController {
         monthLabel.text = "/" + month!
     }
     
-
+    @IBAction func addConsommation() {
+        let monthArr = month?.components(separatedBy: "/")
+        let monthInt = Int(monthArr![0])
+        let yearInt = Int(monthArr![1])
+        let consommation = Consommation()
+        consommation.year = yearInt!
+        consommation.month = monthInt!
+        consommation.day = Int(day.text!)!
+        consommation.category = category!
+        consommation.description = desc.text!
+        consommation.price = Double(price.text!)!
+        DBConnection.insert(consommation: consommation)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? ViewController {
+            viewController.monthStr = month
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
