@@ -37,7 +37,6 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        NSLog(String(consommations.count))
         let cell = tableView.dequeueReusableCell(withIdentifier: "DepenseCell", for: indexPath) as! DepenseTableViewCell
         for (index, consommation) in consommations.enumerated() {
             if index == indexPath.row {
@@ -48,6 +47,14 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            DBConnection.deleteDepenseById(dId: consommations[indexPath.row].id)
+            self.consommations.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
     /*

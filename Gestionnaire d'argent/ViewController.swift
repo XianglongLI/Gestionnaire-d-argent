@@ -53,7 +53,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         initializeMonth()
         setupDatePicker()
-        DBConnection.createTable()
+        setValues()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        initializeMonth()
+        setupDatePicker()
         setValues()
     }
     

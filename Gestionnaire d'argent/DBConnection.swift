@@ -89,7 +89,7 @@ class DBConnection {
     
     static func getDepenses(dYear: Int, dMonth: Int) -> [Consommation] {
         var depenses: [Consommation] = []
-        let query = table.select(year, month, day, category, description, price)
+        let query = table.select(id, year, month, day, category, description, price)
             .filter(year == dYear)
             .filter(month == dMonth)
             .filter(category != "Revenue")
@@ -97,6 +97,7 @@ class DBConnection {
         do {
             for depense in try DBConnection.database.prepare(query) {
                 let consommation = Consommation()
+                consommation.id = depense[id]
                 consommation.year = depense[year]
                 consommation.month = depense[month]
                 consommation.day = depense[day]
@@ -109,6 +110,15 @@ class DBConnection {
             print(error)
         }
         return depenses
+    }
+    
+    static func deleteDepenseById(dId: Int) {
+        let depense = table.filter(id == dId)
+        do {
+            try DBConnection.database.run(depense.delete())
+        } catch {
+            print("delete failed: \(error)")
+        }
     }
     
     static func drop() {
