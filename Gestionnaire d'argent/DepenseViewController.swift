@@ -30,6 +30,9 @@ class DepenseViewController: UIViewController, UITableViewDataSource, UITableVie
         if let categoryViewController = segue.destination as? CategoryViewController {
             categoryViewController.month = monthStr
         }
+        if let viewController = segue.destination as? ViewController {
+            viewController.monthStr = monthStr
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

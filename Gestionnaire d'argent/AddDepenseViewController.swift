@@ -41,8 +41,8 @@ class AddDepenseViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? ViewController {
-            viewController.monthStr = month
+        if let depenseViewController = segue.destination as? DepenseViewController {
+            depenseViewController.monthStr = month
         }
     }
     

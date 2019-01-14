@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1295C9721ECA62600E1EC75 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1295C9621ECA62500E1EC75 /* ConnectionViewController.swift */; };
 		A12FEEB021DCBFAE00910FAE /* DepenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FEEAF21DCBFAE00910FAE /* DepenseTableViewCell.swift */; };
 		A12FEEB221DCC47300910FAE /* Consommation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FEEB121DCC47300910FAE /* Consommation.swift */; };
 		A13C11F721DCE1A100AFDFBF /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12FEEEF21DCE0D800910FAE /* SQLite.framework */; };
@@ -100,6 +101,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1295C9621ECA62500E1EC75 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		A12FEEAF21DCBFAE00910FAE /* DepenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseTableViewCell.swift; sourceTree = "<group>"; };
 		A12FEEB121DCC47300910FAE /* Consommation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consommation.swift; sourceTree = "<group>"; };
 		A12FEEE421DCE0D800910FAE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				A12FEEB121DCC47300910FAE /* Consommation.swift */,
 				A13C11FD21DCE1F100AFDFBF /* DBConnection.swift */,
 				A13C120021DCF6CF00AFDFBF /* Util.swift */,
+				A1295C9621ECA62500E1EC75 /* ConnectionViewController.swift */,
 			);
 			path = "Gestionnaire d'argent";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				A1B6A1EB21DBB960008862A1 /* DepenseViewController.swift in Sources */,
 				A12FEEB021DCBFAE00910FAE /* DepenseTableViewCell.swift in Sources */,
 				A1B6A1F121DBDB5F008862A1 /* AddDepenseViewController.swift in Sources */,
+				A1295C9721ECA62600E1EC75 /* ConnectionViewController.swift in Sources */,
 				A1B6A1B421DB7C7B008862A1 /* AppDelegate.swift in Sources */,
 				A1B6A1E921DBB3DA008862A1 /* RevenueViewController.swift in Sources */,
 				A13C11FE21DCE1F100AFDFBF /* DBConnection.swift in Sources */,
